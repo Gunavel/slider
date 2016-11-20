@@ -1,8 +1,8 @@
-require('rc-slider/assets/index.less');
+require('rc-slider-custom/assets/index.less');
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Slider = require('rc-slider');
+const Slider = require('rc-slider-custom');
 
 const wrapperStyle = { width: 400, margin: 50 };
 
