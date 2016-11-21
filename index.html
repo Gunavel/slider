@@ -7,7 +7,7 @@
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" rel="stylesheet"/>
-  <title>rc-slider@5.3.4 - slider ui component for react</title>
+  <title>rc-slider-custom@1.0.4 - slider ui component for react</title>
   <style>
     @font-face {
       font-family: octicons-anchor;
@@ -737,26 +737,26 @@
 
 <body>
 <div class="header">
-  <h1>rc-slider@5.3.4</h1>
+  <h1>rc-slider-custom@1.0.4</h1>
 </div>
 <div class="examples">
   <h3>EXAMPLES</h3>
   <div class="examples-body">
     <ul>
       
-      <li><a href="examples/custom-handles.html">custom-handles</a></li>
+      <li><a href="examples\custom-handles.html">custom-handles</a></li>
       
-      <li><a href="examples/marks.html">marks</a></li>
+      <li><a href="examples\marks.html">marks</a></li>
       
-      <li><a href="examples/range.html">range</a></li>
+      <li><a href="examples\range.html">range</a></li>
       
-      <li><a href="examples/slider.html">slider</a></li>
+      <li><a href="examples\slider.html">slider</a></li>
       
-      <li><a href="examples/v-marks.html">v-marks</a></li>
+      <li><a href="examples\v-marks.html">v-marks</a></li>
       
-      <li><a href="examples/v-range.html">v-range</a></li>
+      <li><a href="examples\v-range.html">v-range</a></li>
       
-      <li><a href="examples/v-slider.html">v-slider</a></li>
+      <li><a href="examples\v-slider.html">v-slider</a></li>
       
     </ul>
   </div>
@@ -764,8 +764,8 @@
 <div id="readme" class="boxed-group">
   <h3>README.md</h3>
   <div class="markdown-body">
-    <h1>rc-slider<a id="user-content-rc-slider" name="rc-slider" class="anchor" aria-hidden="true" href="#rc-slider"><span class="octicon octicon-link"></span></a></h1><hr>
-<p>slider ui component for react</p>
+    <h1>rc-slider-custom<a id="user-content-rc-slider-custom" name="rc-slider-custom" class="anchor" aria-hidden="true" href="#rc-slider-custom"><span class="octicon octicon-link"></span></a></h1><hr>
+<p>slider ui component for react with option to show toolTip always</p>
 <p><a href="http://npmjs.org/package/rc-slider" title="null"><img src="http://img.shields.io/npm/v/rc-slider.svg?style=flat-square" alt="NPM version"></a>
 <a href="https://travis-ci.org/react-component/slider" title="null"><img src="https://img.shields.io/travis/react-component/slider.svg?style=flat-square" alt="build status"></a>
 <a href="https://coveralls.io/r/react-component/slider?branch=master" title="null"><img src="https://img.shields.io/coveralls/react-component/slider.svg?style=flat-square" alt="Test coverage"></a>
@@ -781,12 +781,12 @@
 <h2>Feature<a id="user-content-feature" name="feature" class="anchor" aria-hidden="true" href="#feature"><span class="octicon octicon-link"></span></a></h2><ul>
 <li>support ie8,ie8+,chrome,firefox,safari</li>
 </ul>
-<h3>Keyboard<a id="user-content-keyboard" name="keyboard" class="anchor" aria-hidden="true" href="#keyboard"><span class="octicon octicon-link"></span></a></h3><h2>install<a id="user-content-install" name="install" class="anchor" aria-hidden="true" href="#install"><span class="octicon octicon-link"></span></a></h2><p><a href="https://npmjs.org/package/rc-slider" title="null"><img src="https://nodei.co/npm/rc-slider.png" alt="rc-slider"></a></p>
+<h3>Keyboard<a id="user-content-keyboard" name="keyboard" class="anchor" aria-hidden="true" href="#keyboard"><span class="octicon octicon-link"></span></a></h3><h2>install<a id="user-content-install" name="install" class="anchor" aria-hidden="true" href="#install"><span class="octicon octicon-link"></span></a></h2><p><a href="https://npmjs.org/package/rc-slider-custom" title="null"><img src="https://nodei.co/npm/rc-slider.png" alt="rc-slider"></a></p>
 <h2>Usage<a id="user-content-usage" name="usage" class="anchor" aria-hidden="true" href="#usage"><span class="octicon octicon-link"></span></a></h2><div class="highlight"><pre><code language="js"><span class="hljs-built_in">require</span>(<span class="hljs-string">'rc-slider/assets/index.css'</span>);
 
 <span class="hljs-keyword">var</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>);
 <span class="hljs-keyword">var</span> ReactDOM = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react-dom'</span>);
-<span class="hljs-keyword">var</span> Rcslider = <span class="hljs-built_in">require</span>(<span class="hljs-string">'rc-slider'</span>);
+<span class="hljs-keyword">var</span> Rcslider = <span class="hljs-built_in">require</span>(<span class="hljs-string">'rc-slider-custom'</span>);
 ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">Rcslider</span> /&gt;</span>, container);</span></code></pre></div><h2>API<a id="user-content-api" name="api" class="anchor" aria-hidden="true" href="#api"><span class="octicon octicon-link"></span></a></h2><h3>props<a id="user-content-props" name="props" class="anchor" aria-hidden="true" href="#props"><span class="octicon octicon-link"></span></a></h3><table class="table table-bordered table-striped">
     <thead>
     <tr>
@@ -911,6 +911,12 @@ ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-t
           <td>NOOP</td>
           <td><code>onAfterChange</code> will be triggered when <code>ontouchend</code> or <code>onmouseup</code> is triggered.</td>
         </tr>
+        <tr>
+          <td>toolTipVisibleAlways</td>
+          <td>bool</td>
+          <td>false</td>
+          <td>If <code>toolTipVisibleAlways</code> is set to true, the tooltip will be visible always.</td>
+        </tr>
     </tbody>
 </table>
 
@@ -919,11 +925,11 @@ npm start</code></pre></div><h2>Example<a id="user-content-example" name="exampl
 <p>online example: <a href="http://react-component.github.io/slider/" title="null">http://react-component.github.io/slider/</a></p>
 <h2>Test Case<a id="user-content-test-case" name="test-case" class="anchor" aria-hidden="true" href="#test-case"><span class="octicon octicon-link"></span></a></h2><p><a href="http://localhost:8005/tests/runner.html?coverage" title="null">http://localhost:8005/tests/runner.html?coverage</a></p>
 <h2>Coverage<a id="user-content-coverage" name="coverage" class="anchor" aria-hidden="true" href="#coverage"><span class="octicon octicon-link"></span></a></h2><p><a href="http://localhost:8005/node_modules/rc-server/node_modules/node-jscover/lib/front-end/jscoverage.html?w=http://localhost:8088/tests/runner.html?coverage" title="null">http://localhost:8005/node_modules/rc-server/node_modules/node-jscover/lib/front-end/jscoverage.html?w=http://localhost:8088/tests/runner.html?coverage</a></p>
-<h2>License<a id="user-content-license" name="license" class="anchor" aria-hidden="true" href="#license"><span class="octicon octicon-link"></span></a></h2><p>rc-slider is released under the MIT license.</p>
+<h2>License<a id="user-content-license" name="license" class="anchor" aria-hidden="true" href="#license"><span class="octicon octicon-link"></span></a></h2><p>rc-slider-custom is released under the MIT license.</p>
 
   </div>
 </div>
-<a href="http://github.com/react-component/slider"><img style="position: absolute; top: 0; right: 0; border: 0;"
+<a href="https://github.com/Gunavel/slider.git"><img style="position: absolute; top: 0; right: 0; border: 0;"
                             src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
                             alt="Fork me on GitHub"
                             data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
