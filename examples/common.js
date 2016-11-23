@@ -24104,6 +24104,15 @@
 	    });
 	  };
 	
+	  Handle.prototype.componentDidMount = function componentDidMount() {
+	    var _this2 = this;
+	
+	    // To force toolTip align once all the UI components are rendered.
+	    setTimeout(function () {
+	      _this2.showTooltip.call(_this2);
+	    }, 1);
+	  };
+	
 	  Handle.prototype.render = function render() {
 	    var _props = this.props,
 	        prefixCls = _props.prefixCls,
