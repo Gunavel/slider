@@ -1,6 +1,7 @@
 import React from 'react';
 import Tooltip from 'rc-tooltip';
 
+
 export default class Handle extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,13 @@ export default class Handle extends React.Component {
     this.setState({
       isTooltipVisible: false,
     });
+  }
+
+  componentDidMount() {
+    // To force toolTip align once all the UI components are rendered.
+    setTimeout(() => {
+        this.showTooltip.call(this);
+    }, 1);
   }
 
   render() {
