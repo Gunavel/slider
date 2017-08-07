@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Tooltip from 'rc-tooltip';
 
 
@@ -11,6 +12,13 @@ export default class Handle extends React.Component {
     };
   }
 
+  componentDidMount() {
+    // To force toolTip align once all the UI components are rendered.
+    setTimeout(() => {
+      this.showTooltip.call(this);
+    }, 1);
+  }
+
   showTooltip() {
     this.setState({
       isTooltipVisible: true,
@@ -21,13 +29,6 @@ export default class Handle extends React.Component {
     this.setState({
       isTooltipVisible: false,
     });
-  }
-
-  componentDidMount() {
-    // To force toolTip align once all the UI components are rendered.
-    setTimeout(() => {
-        this.showTooltip.call(this);
-    }, 1);
   }
 
   render() {
@@ -78,15 +79,15 @@ export default class Handle extends React.Component {
 }
 
 Handle.propTypes = {
-  prefixCls: React.PropTypes.string,
-  tooltipPrefixCls: React.PropTypes.string,
-  className: React.PropTypes.string,
-  vertical: React.PropTypes.bool,
-  offset: React.PropTypes.number,
-  tipTransitionName: React.PropTypes.string,
-  tipFormatter: React.PropTypes.func,
-  value: React.PropTypes.number,
-  dragging: React.PropTypes.bool,
-  noTip: React.PropTypes.bool,
-  toolTipVisibleAlways: React.PropTypes.bool,
+  prefixCls: PropTypes.string,
+  tooltipPrefixCls: PropTypes.string,
+  className: PropTypes.string,
+  vertical: PropTypes.bool,
+  offset: PropTypes.number,
+  tipTransitionName: PropTypes.string,
+  tipFormatter: PropTypes.func,
+  value: PropTypes.number,
+  dragging: PropTypes.bool,
+  noTip: PropTypes.bool,
+  toolTipVisibleAlways: PropTypes.bool,
 };

@@ -204,6 +204,9 @@ npm install
 npm start
 ```
 
+##v1.0.7
+Migrated to PropTypes from React.PropTypes
+
 ## Example
 
 http://localhost:8005/examples/
